@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Etab - Rapport</title>
+    <link rel="stylesheet" href="{% static 'eleve/style/four.css' %}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{% static 'eleve/images/logo.png'%}" alt="Logo de Mon Etab"> 
+                 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'eleve' %}"><span>Élèves</span></a></li>
+                    <li><a href="{% url 'professeur' %}">Professeurs</a></li>
+                    <li><a href="{% url 'utilisateur' %}">Utilisateurs</a></li>
+                    <li><a href="{% url 'rapport' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'login' %}">Déconnexion</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1>Rapport</h1>
+            <div class="main">
+                <a href="javascript:history.back()" class="back-button">&#8592; Retour</a>
+
+                
+                <div class="block-two">
+                    <select id="matiere" name="matiere">
+                        <option value="default">Selectionner une option:</option>
+                        <option value="eleve">Liste des élèves</option>
+                        <option value="professeur">Liste des Professeurs</option>
+                        <option value="utilisateur">Liste des Utilisateurs</option>  
+                    </select>
+                    <button id="red">Générer format PDF</button>
+                   <button id="green">Générer format Excel</button>
+                </div>
+            </div>
+            
+            
+        </main>
+    </div>
+</body>
+</html>

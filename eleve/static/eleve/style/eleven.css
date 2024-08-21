@@ -1,0 +1,99 @@
+/* Styles généraux */
+body {
+    font-family: sans-serif;
+    display: flex; /* Pour le layout sidebar/contenu */
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 100%; 
+    font-size: 20px;
+    background-color: #f0f0f0;
+}
+
+
+/* Styles de la sidebar */
+.sidebar {
+    border-right: 2px solid gray;
+}
+    
+
+.logo img {
+    /* Styles pour le logo si nécessaire */
+    /* width: 150px; */
+    border-bottom: 1px solid gray;
+    margin: 20px;
+    padding-bottom: 30px;
+    /* margin-bottom: 10px; */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.sidebar nav li {
+    margin-bottom: 25px;
+}
+
+span {
+    color: blue;
+}
+
+/* Tableau */
+
+.content {
+    margin: 15px 50px;
+}
+
+h1 {
+    font-size: 33px;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 700px;
+    font-size: 15px;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #ccc;
+}
+
+tbody {
+    font-weight: bold;
+}
+
+#grey {
+    background-color: #ede8e8;
+}
+
+#white {
+    background-color: white;
+}
+
+.one {
+    background-color: orange;
+    border: 2px solid black;
+    padding: 1px;   
+}
+
+.two {
+    background-color: red;
+    border: 2px solid black;
+    padding: 1px;  
+    color: white; 
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Etab - Utilisateurs</title>
+    <link rel="stylesheet" href="{% static 'eleve/style/eleven.css' %}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{% static 'eleve/images/logo.png'%}" alt="Logo de Mon Etab"> 
+                 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'eleve' %}">Élèves</a></li>
+                    <li><a href="{% url 'professeur' %}">Professeurs</a></li>
+                    <li><a href="{% url 'utilisateur' %}"><span>Utilisateurs</span></a></li>
+                    <li><a href="{% url 'rapport' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'login' %}">Déconnexion</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1>Utilisateurs (2)</h1>
+            <table>
+                <a href="{% url 'ajouter_utilisateur' %}" style="text-decoration:none; font-size:20px;"><p>&#43; Ajouter un utilisateur</p></a>
+
+                <thead>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Date de création</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="grey">
+                        <td>admin</td>
+                        <td>16/08/2024</td>
+                        <td><a href="{% url "modifier_utilisateur" %}" style="text-decoration: none;"><strong class="one">Modifier</strong></a></td>
+                    </tr>
+                    <tr id="white">
+                        <td>user2</td>
+                        <td>13/08/2024</td>
+                        <td><a href="{% url "modifier_utilisateur" %}" style="text-decoration: none;"><strong class="one">Modifier</strong></a></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            
+        </main>
+    </div>
+</body>
+</html>
