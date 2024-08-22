@@ -4,41 +4,41 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Etab - Professeurs</title>
-    <link rel="stylesheet" href="{% static 'eleve/style/seven.css' %}">
+    <title>Mon Etab - Élèves</title>
+    <link rel="stylesheet" href="{% static 'student/style/three.css' %}">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img src="{% static 'eleve/images/logo.png'%}" alt="Logo de Mon Etab"> 
+                <img src="{% static 'student/images/logo.png'%}" alt="Logo de Mon Etab"> 
                  
             </div>
             <nav>
                 <ul>
-                    <li><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
-                    <li><a href="{% url 'eleve' %}">Élèves</a></li>
-                    <li><a href="{% url 'professeur' %}"><span>Professeurs</span></a></li>
-                    <li><a href="{% url 'utilisateur' %}">Utilisateurs</a></li>
-                    <li><a href="{% url 'rapport' %}">Rapport</a></li><br><br><br><br><br>
-                    <li><a href="{% url 'login' %}">Déconnexion</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'student:index' %}"><span>Élèves</span></a></li>
+                    <li><a href="{% url 'teacher:index' %}">Professeurs</a></li>
+                    <li><a href="{% url 'user:index' %}">Utilisateurs</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'user:login' %}">Déconnexion</a></li>
                     
                 </ul>
             </nav>
         </aside>
 
         <main class="content">
-            <h1>Professeurs (2)</h1>
+            <h1>Elèves (2)</h1>
+            
             <table>
-                <a href="{% url 'ajouter_professeur' %}" style="text-decoration:none; font-size:20px;"><p>&#43; Ajouter un professeur</p></a>
-
                 <thead>
+                    <a href="{% url 'student:student_add' %}" style="text-decoration:none; font-size:20px;"><p>&#43; Ajouter un élève</p></a>
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>
-                        <th>Matière</th>
-                        
-                        <th>Vacant</th>
+                        <th>Genre</th>
+                        <th>Classe</th>
+                        <th>Matricule</th>
                         <th>Age</th>
                         <th>Téléphone</th>
                         <th>Ville</th>
@@ -47,41 +47,43 @@
                 </thead>
                 <tbody>
                     <tr id="grey">
-                        <td>KOUAKOU</td>
-                        <td>GR2GOIRE</td>
-                        <td>Math</td>
-                        <td>Non</td>
-                        <td>40</td>
+                        <td>KOFFI</td>
+                        <td>George</td>
+                        <td>M</td>
+                        <td>Tle</td>
+                        <td>GDJ7GDGD</td>
+                        <td>25</td>
                         <td>0123456789</td>
-                        <td>Touba</td>
-                        <td><a href="{% url 'modifier_professeur' %}" style="text-decoration:none;"><strong class="one">Modifier</strong></a><a href="#" style="text-decoration:none;"> <strong class="two">Supprimer</strong></a></td>
+                        <td>Bonoua</td>
+                        <td><a href="{% url 'student:student_update' %}" style="text-decoration:none;"><strong class="one">Modifier</strong></a><a href="#" style="text-decoration:none;"> <strong class="two">Supprimer</strong></a></td>
                     </tr>
                     <tr id="white">
-                        <td>ATTA</td>
-                        <td>Flora</td>
-                        <td>Physique</td>
-                        <td>Oui</td>
-                        
-                        <td>37</td>
+                        <td>KONE</td>
+                        <td>Sali</td>
+                        <td>F</td>
+                        <td>2nde</td>
+                        <td>GDJ7GDGD</td>
+                        <td>252</td>
                         <td>0123456789</td>
-                        <td>Bouaké</td>
-                        <td><a href="{% url 'modifier_professeur' %}" style="text-decoration:none;"><strong class="one">Modifier</strong></a><a href="#" style="text-decoration:none;"> <strong class="two">Supprimer</strong></a></td>
+                        <td>Abidjan</td>
+                        <td><a href="{% url 'student:student_update' %}" style="text-decoration:none;"><strong class="one">Modifier</strong></a><a href="#" style="text-decoration:none;"> <strong class="two">Supprimer</strong></a></td>
                     </tr>
                 </tbody>
                 
             </table>
             
         </main>
-                <!-- Modal HTML -->
-        <div id="deleteModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Voulez-vous supprimer cet professeur ?</p>
-                <button id="confirmDelete">Oui</button>
-                <button id="cancelDelete">Non</button>
-            </div>
-        </div>
     </div>
+<!-- Modal HTML -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <h1>Attention</h1>
+        <span class="close">&times;</span>
+        <p>Voulez-vous supprimer cet élève ?</p>
+        <button id="confirmDelete">Oui</button>
+        <button id="cancelDelete">Non</button>
+    </div>
+</div>
 <script>
     // Get the modal
     var modal = document.getElementById("deleteModal");

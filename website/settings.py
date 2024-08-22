@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eleve',
+    "student.apps.StudentConfig",
+    "dashboard.apps.DashboardConfig",
+    "teacher.apps.TeacherConfig",
+    "user.apps.UserConfig"
 ]
 
 MIDDLEWARE = [
@@ -78,6 +82,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'etab_db',
+        #'USER': 'root',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
     }
 }
 

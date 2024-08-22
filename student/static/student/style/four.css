@@ -1,0 +1,106 @@
+/* Styles généraux */
+body {
+    font-family: sans-serif;
+    display: flex; /* Pour le layout sidebar/contenu */
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 100%; 
+    font-size: 20px;
+    background-color: #f0f0f0;
+}
+
+
+/* Styles de la sidebar */
+.sidebar {
+    border-right: 2px solid gray;
+}
+    
+
+.logo img {
+    /* Styles pour le logo si nécessaire */
+    /* width: 150px; */
+    border-bottom: 1px solid gray;
+    margin: 20px;
+    padding-bottom: 30px;
+    /* margin-bottom: 10px; */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.sidebar nav li {
+    margin-bottom: 25px;
+}
+
+span {
+    color: blue;
+}
+
+/* Tableau */
+
+.content {
+    margin: 15px 50px;
+}
+
+h1 {
+    font-size: 33px;
+    padding-bottom: 10px;
+}
+
+.main {
+    display: flex;
+    gap: 80px;
+}
+
+input {
+    display: block;
+    margin: 15px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+}
+
+/* label {
+    display: inline-block;
+} */
+
+input[placeholder] {
+    font-size: 10px;
+}
+
+button {
+    margin: 15px;
+}
+
+#red {
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    box-shadow: 2px 3px black;
+    font-size: 10px;
+}
+
+#green {
+    width: 150px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    box-shadow: 2px 3px black;
+    font-size: 10px;
+}

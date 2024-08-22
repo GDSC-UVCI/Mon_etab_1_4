@@ -52,7 +52,7 @@
         }
 
         .login-box img {
-            display: block; 
+            display: block;
             margin: 0 auto;
             padding: 20px;
         }
@@ -60,10 +60,10 @@
 </head>
 <body>
     <div class="login-box">
-        <img class="logo" src="{% static 'eleve/images/logo.png'%}"  alt="">
+        <img class="logo" src="{% static 'student/images/logo.png'%}"  alt="">
         <input type="text" placeholder="Identifiant">
         <input type="password" placeholder="Mot de passe">
-        <button><a href="{% url 'dashboard' %}" style="color: inherit; text-decoration: none;">Connexion</a></button>
+        <button><a href="{% url 'dashboard:index' %}" style="color: inherit; text-decoration: none;">Connexion</a></button>
     </div>
 </body>
 </html>

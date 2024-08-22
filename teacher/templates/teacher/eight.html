@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Etab - Ajouter un professeur</title>
-    <link rel="stylesheet" href="{% static 'eleve/style/four.css' %}">
+    <link rel="stylesheet" href="{% static 'student/style/four.css' %}">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img src="{% static 'eleve/images/logo.png' %}" alt="Logo de Mon Etab"> 
+                <img src="{% static 'student/images/logo.png' %}" alt="Logo de Mon Etab"> 
                  
             </div>
             <nav>
                 <ul>
-                    <li><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
-                    <li><a href="{% url 'eleve' %}"><span>Élèves</span></a></li>
-                    <li><a href="{% url 'professeur' %}">Professeurs</a></li>
-                    <li><a href="{% url 'utilisateur' %}">Utilisateurs</a></li>
-                    <li><a href="{% url 'rapport' %}">Rapport</a></li><br><br><br><br><br>
-                    <li><a href="{% url 'login' %}">Déconnexion</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'student:index' %}"><span>Élèves</span></a></li>
+                    <li><a href="{% url 'teacher:index' %}">Professeurs</a></li>
+                    <li><a href="{% url 'user:index' %}">Utilisateurs</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'user:login' %}">Déconnexion</a></li>
                     
                 </ul>
             </nav>

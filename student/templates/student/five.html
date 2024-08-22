@@ -4,34 +4,34 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Etab - Modifier un professeur</title>
-    <link rel="stylesheet" href="{% static 'eleve/style/four.css' %}">
+    <title>Mon Etab - Modifier un élève</title>
+    <link rel="stylesheet" href="{% static 'student/style/four.css' %}">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img src="{% static 'eleve/images/logo.png'%}" alt="Logo de Mon Etab"> 
+                <img src="{% static 'student/images/logo.png'%}" alt="Logo de Mon Etab"> 
                  
             </div>
             <nav>
                 <ul>
-                    <li><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
-                    <li><a href="{% url 'eleve' %}"><span>Élèves</span></a></li>
-                    <li><a href="{% url 'professeur' %}">Professeurs</a></li>
-                    <li><a href="{% url 'utilisateur' %}">Utilisateurs</a></li>
-                    <li><a href="{% url 'rapport' %}">Rapport</a></li><br><br><br><br><br>
-                    <li><a href="{% url 'login' %}">Déconnexion</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'student:index' %}"><span>Élèves</span></a></li>
+                    <li><a href="{% url 'teacher:index' %}">Professeurs</a></li>
+                    <li><a href="{% url 'user:index' %}">Utilisateurs</a></li>
+                    <li><a href="{% url 'dashboard:index' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'user:login' %}">Déconnexion</a></li>
                     
                 </ul>
             </nav>
         </aside>
 
         <main class="content">
-            <h1>Modifier un professeur</h1>
-            
+            <h1>Modifier un élève</h1>
             <a href="javascript:history.back()" class="back-button">&#8592; Retour</a>
             <div class="main">
+                
                 <div class="block-one">
                     <input type="text" placeholder="Nom">
                     <input type="text" placeholder="Prénom">
@@ -44,19 +44,19 @@
                             <label>Femme</label>
                     
 
+                    <input type="text" placeholder="Matricule">
                     <input type="date">
                 </div>
                 <div class="block-two">
-                    <select id="matiere" name="matiere">
-                        <option value="default">Selectionner une matière:</option>
-                        <option value="Math">Math</option>
-                        <option value="Physique">Physique</option>
-                        <option value="Svt">Svt</option>  
-                        <option value="Anglais">Anglais</option>
-                        <option value="Philosophie">Philosophie</option>
-                        <option value="Eps">Eps</option>
-                        <option value="Français">Français</option>
-                    </select>
+                    <select id="classe" name="classe">
+                        <option value="default">Selectionner une classe:</option>
+                        <option value="Tle">Tle</option>
+                        <option value="1ere">1ere</option>
+                        <option value="2nde">2nde</option>  
+                        <option value="3eme">3eme</option>
+                        <option value="4eme">4eme</option>
+                        <option value="5eme">5eme</option>
+                        <option value="6eme">6eme</option>
                     <input type="text" placeholder="Téléphone">
                     <input type="text" placeholder="Ville">
                 </div>

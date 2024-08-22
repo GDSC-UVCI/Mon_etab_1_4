@@ -5,14 +5,7 @@ from django.shortcuts import render
 def dashboard(request):
     return render(request, 'eleve/index.html')
 
-def eleve(request):
-    return render(request, 'eleve/three.html')
 
-def ajouter_eleve(request):
-    return render(request, 'eleve/four.html')
-
-def modifier_eleve(request):
-    return render(request, 'eleve/five.html')
 
 def professeur(request):
     return render(request, 'eleve/seven.html')

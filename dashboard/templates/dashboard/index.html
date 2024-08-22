@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Etab - Tableau de bord</title>
+    <link rel="stylesheet" href="{% static 'student/style/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{% static 'student/images/logo.png' %}" alt="Logo de Mon Etab">   
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'dashboard:index' %}">Tableau de bord</a></li>
+                    <li><a href="{% url 'student:index' %}"><span>Élèves</span></a></li>
+                    <li><a href="{% url 'teacher:index' %}">Professeurs</a></li>
+                    <li><a href="{% url 'user:index' %}">Utilisateurs</a></li>
+                    <li><a href="{% url 'dashboard:report' %}">Rapport</a></li><br><br><br><br><br>
+                    <li><a href="{% url 'user:login' %}">Déconnexion</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1>Tableau de bord</h1>
+
+            <div class="dashboard-cards-one">
+                <div class="card">
+                    <h2>Nombre d'élève</h2>
+                    <br>
+                    <p>128 100</p> 
+                </div>
+                <div class="card">
+                    <h2>Nombre de professeur</h2>
+                    <br>
+                    <p>128 100</p> 
+                </div>
+            </div>
+            <div class="dashboard-cards-two">
+                <div class="card">
+                    <h2>Nombre d'utilisateur</h2>
+                    <br>
+                    <p>128 100</p> 
+                </div>
+                <div class="card">
+                    <h2>Élève par genre</h2>
+                    <div class="center">
+                        <div class="pie-chart">
+                        </div>
+                        <ul class="legend">
+                            <li><span class="homme"></span> Homme</li>
+                            <li><span class="femme"></span> Femme</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
