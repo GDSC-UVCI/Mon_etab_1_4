@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+#simple comment to change commit msg
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'website.settings')
